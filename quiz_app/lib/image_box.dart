@@ -10,6 +10,7 @@ class ImageBox extends StatelessWidget {
         Image.asset(
           'assets/images/quiz-logo.png',
           width: 300,
+          color: const Color.fromARGB(151, 235, 231, 231),
         ),
         const SizedBox(height: 50),
         const Text(
@@ -20,16 +21,20 @@ class ImageBox extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 40),
-        TextButton(
+        OutlinedButton.icon(
           onPressed: () {},
-          child: const Text(
+          style: OutlinedButton.styleFrom(
+            foregroundColor: Colors.white,
+          ),
+          icon: const Icon(Icons.arrow_right_alt),
+          label: const Text(
             'Start Quiz',
             style: TextStyle(
               color: Colors.white,
               fontSize: 20.0,
             ),
           ),
-        )
+        ),
       ],
     );
   }
